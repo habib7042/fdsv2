@@ -130,7 +130,7 @@ export default function AccountantDashboard() {
 
       if (data.success) {
         // Refresh the data
-        const accountantResponse = await fetch('/api/accountant/dashboard');
+        const accountantResponse = await fetch('/api/accountant-supabase/dashboard');
         const accountantData = await accountantResponse.json();
         if (accountantResponse.ok) {
           setMembers(accountantData.members);
@@ -175,7 +175,7 @@ export default function AccountantDashboard() {
 
       if (data.success) {
         // Refresh the data
-        const accountantResponse = await fetch('/api/accountant/dashboard');
+        const accountantResponse = await fetch('/api/accountant-supabase/dashboard');
         const accountantData = await accountantResponse.json();
         if (accountantResponse.ok) {
           setMembers(accountantData.members);
