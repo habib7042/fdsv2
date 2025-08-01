@@ -1,7 +1,7 @@
 // Script to add accountant to Supabase
 const accountantData = {
   name: 'Accountant',
-  mobileNumber: '01893669792',
+  mobileNumber: '01893669791',
   pin: '7042'
 };
 
