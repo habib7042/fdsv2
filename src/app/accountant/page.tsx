@@ -93,7 +93,7 @@ export default function AccountantDashboard() {
 
     const fetchAccountantData = async () => {
       try {
-        const response = await fetch('/api/accountant/dashboard');
+        const response = await fetch('/api/accountant-supabase/dashboard');
         const data = await response.json();
 
         if (response.ok) {
@@ -118,7 +118,7 @@ export default function AccountantDashboard() {
     e.preventDefault();
     
     try {
-      const response = await fetch('/api/members', {
+      const response = await fetch('/api/members-supabase', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ export default function AccountantDashboard() {
 
   const handleApproveDeposit = async (depositId: string) => {
     try {
-      const response = await fetch('/api/deposits/approve', {
+      const response = await fetch('/api/deposits-supabase/approve', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

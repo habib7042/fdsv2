@@ -73,7 +73,7 @@ export default function MemberDashboard() {
 
     const fetchMemberData = async () => {
       try {
-        const response = await fetch(`/api/member/dashboard?mobileNumber=${encodeURIComponent(mobileNumber)}`);
+        const response = await fetch('/api/member-supabase/dashboard', {
         const data = await response.json();
 
         if (response.ok) {
@@ -100,7 +100,7 @@ export default function MemberDashboard() {
     setSubmitting(true);
     
     try {
-      const response = await fetch('/api/deposits', {
+        const response = await fetch('/api/deposits-supabase', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export default function MemberDashboard() {
         // Refresh member data
         const mobileNumber = localStorage.getItem("mobileNumber");
         if (mobileNumber) {
-          const refreshResponse = await fetch(`/api/member/dashboard?mobileNumber=${encodeURIComponent(mobileNumber)}`);
+          const refreshResponse = await fetch('/api/member-supabase/dashboard', {
           const refreshData = await refreshResponse.json();
           if (refreshResponse.ok) {
             setMemberData(refreshData);
